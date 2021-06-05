@@ -1,3 +1,9 @@
+# Environment Setup Steps
+
+1. Run 'npm install' into the rootfolder /blueprint-demo
+2. Run 'json-server --watch db.json' into /blueprint-demo/src/assets/data/ to start fake-api server
+3. Run 'npm start' to start the application
+
 # BlueprintDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
