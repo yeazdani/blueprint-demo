@@ -1,0 +1,16 @@
+<div fxLayout="column" fxLayoutAlign="center">
+    <mat-card>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxFlex="80">
+                <span class="name">{{employee.fullName}}</span>
+                <br>
+                <span class="position">{{getPositionTitle(employee.position)}}</span>
+            </div>
+            <div fxFlex="20" fxLayoutAlign="end">
+                <button mat-icon-button (click)="deleteEmployee(employee.id)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+    <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="20px">
+        <div fxFlex="25">
+            <cdk-virtual-scroll-viewport itemSize="auto" class="example-viewport">
+                <div *cdkVirtualFor="let employee of employeeList" class="example-item">
+                    <app-employee-list-item [employee]="employee" (click)="setEmployee(employee)">
+                    </app-employee-list-item>
+                </div>
+            </cdk-virtual-scroll-viewport>
+        </div>
+        <div fxFlex="75">
+            <app-personal-info [employee]="employee" (output)="onUpdate($event)"></app-personal-info>
+        </div>
+    </div>
+</div>

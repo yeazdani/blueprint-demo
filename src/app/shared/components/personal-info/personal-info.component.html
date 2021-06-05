@@ -1,0 +1,49 @@
+<!-- [formGroup]="profileForm" -->
+<div class="personal-info" fxLayout="column" fxLayoutAlign="center" fxFlex="1 0 auto">
+    <form name="profileForm" novalidate [formGroup]="profileForm">
+        <mat-card>
+            <div fxLayout="row" fxLayoutAlign="start">
+                <h1>Personal Information</h1>
+            </div>
+
+            <mat-divider></mat-divider>
+            <br>
+
+            <div fxLayout="row" fxLayoutAlign="start">
+                <mat-form-field appearance="outline">
+                    <mat-label>Full Name</mat-label>
+                    <input matInput placeholder="Full Name" formControlName="fullName" required>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="start">
+                <mat-form-field appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <input matInput placeholder="Address" formControlName="address">
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="start">
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone Number</mat-label>
+                    <input type="tel" matInput placeholder="555-555-1234" formControlName="phoneNumber">
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="start">
+                <mat-form-field appearance="outline">
+                    <mat-label>Select an option</mat-label>
+                    <mat-select disableRipple formControlName="position">
+                        <mat-option *ngFor="let item of positions" [value]="item.id">{{item.title}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="end">
+                <button mat-raised-button color="primary" (click)="onSave()" [disabled]="profileForm.invalid">Save</button>
+            </div>
+        </mat-card>
+
+    </form>
+
+</div>

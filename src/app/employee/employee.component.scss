@@ -1,0 +1,17 @@
+.container {
+    margin: 16px;
+    .example-viewport {
+        height: 980px;
+        width: 100%;
+    }
+    .example-item {
+        height: auto;
+        margin-bottom: 8px;
+    }
+    mat-card {
+        padding: 0px;
+    }
+    .active {
+        border: 1px solid black;
+    }
+}
